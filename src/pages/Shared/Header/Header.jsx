@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 import { Link } from "react-router-dom";
-import logo from '/logo.png'
+import logo from "/logo.png";
 
 const Header = () => {
   return (
-    <div className="navbar container mx-auto px-20">
+    <div className="navbar container mx-auto px-10 py-7">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -23,91 +23,69 @@ const Header = () => {
               />
             </svg>
           </label>
-          <ul
-            tabIndex={0}
-            className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
-          >
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li tabIndex={0}>
-              <a className="justify-between">
-                Product
-                <svg
-                  className="fill-current"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
-                </svg>
-              </a>
-              <ul className="p-2 bg-white">
-                <li>
-                  <a>Product Gallery</a>
-                </li>
-                <li>
-                  <a>Product Featured</a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <Link to="/orders">Orders</Link>
-            </li>
-            <li>
-              <Link to="/blog">Blog</Link>
-            </li>
-          </ul>
         </div>
-        {/* <p className="font-[abhaya] font-medium text-4xl">Oasis</p> */}
-        <img  className=' text-white w-[90px]' src={logo} alt="" />
+        <img className=" text-white w-[100px] mr-16" src={logo} alt="" />
+        <form>
+          <label
+            for="search"
+            class="mb-2 text-sm font-medium sr-only text-white"
+          >
+            Search
+          </label>
+          <div class="relative min-w-full">
+            <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+              <svg
+                aria-hidden="true"
+                class="w-5 h-5 text-white dark:text-gray-400"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                ></path>
+              </svg>
+            </div>
+            <input
+              type="search"
+              id="search"
+              class="block bg-opacity-40 w-full p-2 pl-10 text-sm text-white border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:outline-none placeholder:text-white  focus:border"
+              placeholder="Search your destination"
+              required
+            />
+          </div>
+        </form>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
+        <ul className="menu menu-horizontal text-white px-1">
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/">News</Link>
           </li>
-          <li tabIndex={0}>
-            <a>
-              Product
-              <svg
-                className="fill-current"
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-              >
-                <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
-              </svg>
-            </a>
-            <ul className="p-2 bg-white">
-              <li>
-                <a>Product Gallery</a>
-              </li>
-              <li>
-                <a>Product Featured</a>
-              </li>
-            </ul>
-          </li>
+
           <li>
-            <Link to="/orders">Orders</Link>
+            <Link>Destination</Link>
           </li>
           <li>
             <Link to="/blog">Blog</Link>
           </li>
+          <li>
+            <Link>Contact</Link>
+          </li>
         </ul>
       </div>
       <div className="navbar-end flex gap-4">
-        <Link to="/login">Login </Link>
+        <Link className="bg-amber-500 px-8 py-2 rounded-md" to="/login">
+          Login{" "}
+        </Link>
 
-        <Link to="/register">Register</Link>
-
-       
+        <Link className="text-white" to="/register">Register</Link>
       </div>
     </div>
   );
 };
-
 
 export default Header;
