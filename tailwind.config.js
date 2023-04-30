@@ -4,11 +4,12 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
-      fontFamily: {
-        poppins: ["Poppins", "sans-serif"],
-        abhaya: ["Abhaya Libre", "serif"],
-      },
+      // fontFamily: {
+      //   poppins: ["Poppins", "sans-serif"],
+      //   abhaya: ["Abhaya Libre", "serif"],
+      // },
     },
   },
   plugins: [require("daisyui")],
 };
+                                
