@@ -7,9 +7,9 @@ const Registration = () => {
   return (
     <div>
       <div className="container mx-auto">
-        <form className="bg-white p-8 rounded-md w-2/3 lg:w-2/5 mx-auto mt-16">
+        <form className="bg-white p-10 lg:p-14  border-2 rounded-lg w-2/3 lg:w-2/5 mx-auto my-16">
           <h1 className="text-xl md:text-2xl font-bold leading-tight mb-5">
-           Create an account
+            Create an account
           </h1>
           <div class="relative z-0 w-full mb-6 group">
             <input
@@ -97,7 +97,7 @@ const Registration = () => {
           <div className="text-center">
             <button
               type="submit"
-              class="bg-amber-500 focus:outline-none font-medium rounded-lg text-sm w-full px-5 py-2.5 text-center"
+              class="bg-amber-500 focus:outline-none font-medium rounded-lg text-sm w-full mt-10 px-5 py-2.5 text-center"
             >
               Create an account
             </button>
@@ -115,7 +115,11 @@ const Registration = () => {
         flex items-center justify-center"
           >
             <div className="w-full h-100">
-              <hr className="my-9 border-gray-300 w-full" />
+              <div className="flex gap-2 items-center">
+                <hr className="my-9 border-gray-300 w-1/2" />
+                <p>Or</p>
+                <hr className="my-9 border-gray-300 w-1/2" />
+              </div>
 
               <button
                 type="button"

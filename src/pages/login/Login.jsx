@@ -6,7 +6,7 @@ import fbIcon from "/icons/fb.png";
 const Login = () => {
   return (
     <div className="container mx-auto">
-      <form className="bg-white p-12 rounded-md w-2/3 lg:w-2/5 mx-auto mt-16">
+      <form className="bg-white p-10 lg:p-14  border-2 rounded-lg w-2/3 lg:w-2/5 mx-auto mt-16">
         <h1 className="text-xl md:text-2xl font-bold leading-tight mb-5">
           Log in to your account
         </h1>
@@ -83,12 +83,15 @@ const Login = () => {
         </div>
 
         <div
-          className="bg-white w-full 
+          className="w-full 
         flex items-center justify-center"
         >
           <div className="w-full h-100">
-            <hr className="my-9 border-gray-300 w-full" />
-
+            <div className="flex gap-2 items-center">
+              <hr className="my-9 border-gray-300 w-1/2" />
+              <p>Or</p>
+              <hr className="my-9 border-gray-300 w-1/2" />
+            </div>
             <button
               type="button"
               className="w-full mb-5 block bg-white hover:bg-gray-100 focus:bg-gray-100 text-gray-900 font-semibold rounded-lg px-4 py-3 border border-gray-300"
