@@ -39,7 +39,7 @@ const Home = () => {
           scrollbar={{ draggable: true }}
           onSlideChange={() => console.log("slide change")}
           onSwiper={(swiper) => console.log(swiper)}
-        >
+        >5
           <SwiperSlide className="hover:border-[3px] rounded-2xl border-amber-500 cursor-pointer">
             <img className="rounded-2xl" src={sliderImg6} alt="" />
           </SwiperSlide>
